@@ -68,6 +68,9 @@ export const getCommandline = function (
   }
   // Add deno.land to allow uncached remote deps
   allowedDomains.push("deno.land");
+  allowedDomains.push("wired-api.aws.conde.io");
+  allowedDomains.push("stg-wired-api.aws.conde.io");
+  allowedDomains.push("esm.sh");
 
   command.push("--allow-net=" + allowedDomains.join(","));
   command.push(findRelativeFile(mainModule, "local-run-function.ts"));
